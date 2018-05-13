@@ -35,4 +35,8 @@ def create_app(config_name):
     # session信息存储
     Session(app)
 
+    # 导入app_1_0，注册蓝图
+    import app_1_0
+    app.register_blueprint(app_1_0.api, url_prefix='/api/v1.0')
+
     return app
