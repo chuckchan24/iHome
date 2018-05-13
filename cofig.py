@@ -1,11 +1,11 @@
 # coding=utf-8
 import redis
 
+
 class Config(object):
     """配置项"""
-    DEBUG = True
 
-    # 设置csrf的sshiecret_key
+    # 设置csrf的secret_key
     SECRET_KEY = 'lRca3y6BjCxE9dmlwB7/LIPlsu5QAY2ESBWQ+jTatfbc72UUPxXDnrVQ+bUQ6s3P'
 
     # mysql数据库相关配置
@@ -27,3 +27,28 @@ class Config(object):
     SESSION_USE_SIGNER = True
     # 设置session的过期时间
     PERMANENT_SESSION_LIFETIME = 86400 * 2
+
+
+class DevelopmentConfig(Config):
+    """开发环境中的配置类"""
+
+    DEBUG = True
+
+
+class ProductionConfig(Config):
+    """生产环境中的配置类"""
+
+    pass
+
+
+class TestingConfig(Config):
+    """测试环境中的配置类"""
+
+    TESTING = True
+
+
+config_dict = {
+    'development': DevelopmentConfig,
+    'production': ProductionConfig,
+    'testing': TestingConfig,
+}
