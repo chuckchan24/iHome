@@ -3,7 +3,7 @@
 
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
-from ihome import create_app, db
+from ihome import create_app, db, models
 
 # 需求：不修改业务逻辑代码，只通过修改manager.py的代码，实现转换不同模式：开发，测试，生产
 app = create_app('development')

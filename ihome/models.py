@@ -11,9 +11,9 @@ class BaseModel(object):
     """模型基类，为每个模型补充创建时间和更新事件"""
 
     # 模型创建时间
-    create_time = db.Column(db.DataTime, default=datetime.now)
+    create_time = db.Column(db.DateTime, default=datetime.now)
     # 模型更新事件
-    update_time = db.Column(db.DtaTime, default=datetime.now, onupdate=datetime.now)
+    update_time = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)
 
 
 class User(BaseModel, db.Model):
