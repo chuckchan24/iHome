@@ -7,13 +7,13 @@ from flask_wtf.csrf import generate_csrf
 html = Blueprint('html', __name__)
 
 
-@html.route('/<re(".*"):file_name>')
+@html.route('/<re(".*"):file_name>', methods=['GET', 'POST'])
 def get_html(file_name):
     """提供html静态文件"""
     # 根据用户访问路径中指定的html文件名，找到指定的静态文件并返回
     if not file_name:
         # 表示用户访问的是'/'
-        file_name = 'index'
+        file_name = 'index.html'
 
     # 判断如果不是网站logo
     if file_name != 'favicon.ico':
