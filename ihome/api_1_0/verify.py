@@ -3,8 +3,9 @@
 from ihome.utils.response_code import RET
 from . import api
 from ihome.utils.captcha.captcha import captcha
-from flask import make_response, request, jsonify
+from flask import make_response, request, jsonify, current_app
 from ihome import redis_store, constants
+
 
 @api.route('/image_code')
 def get_image_code():
@@ -37,7 +38,7 @@ def get_image_code():
         redis_store.set('imagecode: %s' % image_code_id,
                     text, constants.IMAGE_CODE_REDIS_EXPIRES)
     except Exception as e:
-        print e
+        current_app.logger.error(e)
         return jsonify(errno=RET.DBERR, errmsg='保存图片验证码失败')
     # 4.返回验证码图片
     return response
@@ -49,3 +50,4 @@ def get_sms_code():
     产生手机短信验证码
     :return:
     """
+    pass

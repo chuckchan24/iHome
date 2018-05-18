@@ -6,6 +6,7 @@
 dist
 build
 .idea
+logs/log*
 
 # Windows:
 Thumbs.db

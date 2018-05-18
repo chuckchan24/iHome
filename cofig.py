@@ -2,6 +2,7 @@
 """项目配置文件"""
 
 import redis
+import logging
 
 
 class Config(object):
@@ -36,11 +37,15 @@ class DevelopmentConfig(Config):
 
     DEBUG = True
 
+    # 开发阶段日志等级
+    LOG_LEVEL = logging.DEBUG
+
 
 class ProductionConfig(Config):
     """生产环境中的配置类"""
 
-    pass
+    # 生产阶段日志等级
+    LOG_LEVEL = logging.WARNING
 
 
 class TestingConfig(Config):
