@@ -1,0 +1,10 @@
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 178-687-308
+CRITICAL index.py:9 Fatal Message
+ERROR index.py:10 Error Message
+WARNING index.py:11 Warn Message
+INFO index.py:12 Info Message
+DEBUG index.py:13 Debug Message
+INFO _internal.py:87 127.0.0.1 - - [18/May/2018 21:00:16] "GET /api/v1.0/ HTTP/1.1" 200 -

@@ -1,2 +1,54 @@
+# coding=gbk
 # coding=utf-8
-"""å‘é€çŸ­ä¿¡"""
+# -*- coding: UTF-8 -*-
+"""·¢ËÍ¶ÌĞÅ"""
+
+from ihome.libs.yuntongxun.CCPRestSDK import REST
+import ConfigParser
+
+# Ö÷ÕÊºÅ
+accountSid = '8aaf0708635e4ce00163777c908510aa'
+
+# Ö÷ÕÊºÅToken
+accountToken = '9ad9c8550bf0441291cfc63bd2c5e18c'
+
+# Ó¦ÓÃId
+appId = '8aaf0708635e4ce00163777c90d610b0'
+
+# ÇëÇóµØÖ·£¬¸ñÊ½ÈçÏÂ£¬²»ĞèÒªĞ´http://
+serverIP = 'app.cloopen.com'
+
+# ÇëÇó¶Ë¿Ú
+serverPort = '8883'
+
+# REST°æ±¾ºÅ
+softVersion = '2013-12-26'
+
+
+class CCP(object):
+
+    def __init__(self):
+        # ³õÊ¼»¯REST SDK
+        self.rest = REST(serverIP, serverPort, softVersion)
+        self.rest.setAccount(accountSid, accountToken)
+        self.rest.setAppId(appId)
+
+    # ·¢ËÍÄ£°å¶ÌĞÅ
+    # @param to ÊÖ»úºÅÂë
+    # @param datas ÄÚÈİÊı¾İ ¸ñÊ½ÎªÊı×é ÀıÈç£º{'12','34'}£¬Èç²»ĞèÌæ»»ÇëÌî ''
+    # @param $tempId Ä£°åId
+    def send_template_sms(self, to, datas, tempId):
+
+        # sendTemplateSMS(ÊÖ»úºÅÂë,ÄÚÈİÊı¾İ,Ä£°åId)
+        result = self.rest.sendTemplateSMS(to, datas, tempId)
+        print(result)
+
+        if result.get('satusCode') == '000000':
+            # ¶ÌĞÅ·¢ËÍ³É¹¦
+            return 1
+        else:
+            # ¶ÌĞÅ·¢ËÍÊ§°Ü
+            return 0
+if __name__ == '__main__':
+    # sendTemplateSMS('18617166803', ['123456', 5], 1)
+    CCP().send_template_sms('18617166803', ['123456', 5], 1)
