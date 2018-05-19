@@ -46,6 +46,50 @@ function sendSMSCode() {
     }
 
     // TODO: 通过ajax方式向后端接口发送请求，让后端发送短信验证码
+    var params = {
+        'mobile': mobile,
+        'image_code': imageCode,
+        'image_code_id': imageCodeId
+    };
+    $.ajax({
+        "url": "/api/v1.0/sms_code",  // 请求的url地址
+        "type": "post",  // 请求方式，默认是get
+        "contentType": "application/json",
+        "data": JSON.stringify(params),  // 请求时传递的数据
+        "success": function (resp) {
+            // 回调函数
+            // 判断发送是否成功
+            if (resp.errno == '0') {
+                // 发送成功
+                // 进行倒计时60秒
+                var time = 60;
+                var timer = setInterval(function () {
+                    if (time <= 0) {
+                        // 倒计时结束
+                        // 清楚倒计时
+                        clearInterval(timer);
+                        // 重置获取验证码内容
+                        $('.phonecode-a').html('获取验证码');
+                        // 添加发送短信点击事件
+                        $('.phonecode-a').attr('onclick', 'sendSMSCode();');
+                    }
+                    else {
+                        // 倒计时剩余秒数
+                        time -= 1;
+                        // 设置前端显示倒计时剩余秒数
+                        $('.phonecode-a').html(time + '秒');
+                    }
+                }, 1000);
+            }
+            else {
+                // 发送失败
+                $('#phone-code-err span').html(resp.errmsg);
+                $('#phone-code-err').show();
+                // 添加发送短信点击事件
+                $(".phonecode-a").attr("onclick", "sendSMSCode();");
+            }
+        }
+    })
 }
 
 $(document).ready(function() {
