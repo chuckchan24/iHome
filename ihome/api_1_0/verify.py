@@ -89,6 +89,7 @@ def get_image_code():
 
     # 1.接受参数（图片验证码表示）并进行校验
     image_code_id = request.args.get('cur_id')
+    print image_code_id
 
     if not image_code_id:
         return jsonify(errno=RET.PARAMERR, errmsg='缺少参数')

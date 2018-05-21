@@ -22,7 +22,7 @@ function generateImageCode() {
     imageCodeId = generateUUID();
 
     // 设置验证码图片img标签src地址
-    var req_url='/api/v1.0/image_code?cur_id' + imageCodeId;
+    var req_url='/api/v1.0/image_code?cur_id=' + imageCodeId;
     // $('.image-code').children('img').attr('src', req_url);
     $('.image-code>img').attr('src', req_url);
 }
@@ -56,6 +56,9 @@ function sendSMSCode() {
         "type": "post",  // 请求方式，默认是get
         "contentType": "application/json",
         "data": JSON.stringify(params),  // 请求时传递的数据
+        "headers": {
+            "X-CSRFToken": getCookie('csrf_token')
+        },
         "success": function (resp) {
             // 回调函数
             // 判断发送是否成功
@@ -112,4 +115,4 @@ $(document).ready(function() {
     });
 
     // TODO: 注册的提交(判断参数是否为空)
-})
+});
