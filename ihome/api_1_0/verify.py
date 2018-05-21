@@ -112,12 +112,3 @@ def get_image_code():
         return jsonify(errno=RET.DBERR, errmsg='保存图片验证码失败')
     # 4.返回验证码图片
     return response
-
-
-@api.route('/sms_code')
-def get_sms_code():
-    """
-    产生手机短信验证码
-    :return:
-    """
-    pass

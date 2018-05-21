@@ -43,12 +43,14 @@ class CCP(object):
         result = self.rest.sendTemplateSMS(to, datas, tempId)
         print(result)
 
-        if result.get('satusCode') == '000000':
+        if result.get('statusCode') == '000000':
             # 短信发送成功
             return 1
         else:
             # 短信发送失败
             return 0
+
+
 if __name__ == '__main__':
     # sendTemplateSMS('18617166803', ['123456', 5], 1)
     CCP().send_template_sms('18617166803', ['123456', 5], 1)
