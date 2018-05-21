@@ -236,3 +236,228 @@ INFO _internal.py:87 127.0.0.1 - - [21/May/2018 16:40:47] "GET /api/v1.0/image_c
 INFO _internal.py:87 127.0.0.1 - - [21/May/2018 16:40:48] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
 INFO _internal.py:87 127.0.0.1 - - [21/May/2018 16:40:48] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
 INFO _internal.py:87 127.0.0.1 - - [21/May/2018 16:40:48] "GET /api/v1.0/image_code?cur_id=e20c0997-6cfa-4648-8165-71bcafd85ce0 HTTP/1.1" 200 -
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 178-687-308
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:38] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:38] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:38] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:38] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:39] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:39] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:39] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:39] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:39] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:39] "GET /static/js/ihome/register.js?v=4 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:39] "GET /api/v1.0/image_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:39] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO verify.py:101 图片验证码是：F6TR
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:40] "GET /api/v1.0/image_code?cur_id=085e084c-e5e2-41e5-bd7c-59fb59a5c3a7 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:40] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO verify.py:57 短信验证码是：331985
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:24:57] "POST /api/v1.0/sms_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:07] "POST /api/v1.0/users HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:21] "POST /api/v1.0/users HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:32] "POST /api/v1.0/users HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:35] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:35] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:35] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:35] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:36] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:36] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:36] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:36] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:36] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:36] "GET /static/js/ihome/register.js?v=4 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:36] "GET /api/v1.0/image_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:36] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:36] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO verify.py:101 图片验证码是：4MUR
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:36] "GET /api/v1.0/image_code?cur_id=a9c3e228-8616-440d-a277-74444a019e9d HTTP/1.1" 200 -
+INFO verify.py:57 短信验证码是：114554
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:25:59] "POST /api/v1.0/sms_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:13] "POST /api/v1.0/users HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:16] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:16] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:16] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:16] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:16] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:16] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:16] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:16] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:16] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:16] "GET /static/js/ihome/register.js?v=4 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:16] "GET /api/v1.0/image_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:16] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:17] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO verify.py:101 图片验证码是：BNAD
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:26:17] "GET /api/v1.0/image_code?cur_id=44a88b56-967a-45d5-a2db-91eb301c0da7 HTTP/1.1" 200 -
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 178-687-308
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 178-687-308
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /static/js/ihome/register.js?v=4 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /api/v1.0/image_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO verify.py:101 图片验证码是：REHG
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:29] "GET /api/v1.0/image_code?cur_id=613935d9-e0ef-47d8-910a-2534d30ef25a HTTP/1.1" 200 -
+INFO verify.py:57 短信验证码是：354704
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:27:43] "POST /api/v1.0/sms_code HTTP/1.1" 200 -
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 178-687-308
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:27] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:27] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:27] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:27] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:27] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:27] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:27] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:27] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:28] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:28] "GET /static/js/ihome/register.js?v=4 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:28] "GET /api/v1.0/image_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:28] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:28] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO verify.py:101 图片验证码是：C8WF
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:28] "GET /api/v1.0/image_code?cur_id=b9c06809-30bd-4fd7-b0d8-31554ccb2b48 HTTP/1.1" 200 -
+INFO verify.py:57 短信验证码是：831845
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:38] "POST /api/v1.0/sms_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:28:53] "POST /api/v1.0/users HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:29:13] "POST /api/v1.0/users HTTP/1.1" 200 -
+INFO _internal.py:87  * Detected change in '/home/python/PycharmProject/FlaskCourse/ihome/ihome/api_1_0/passport.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 178-687-308
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 178-687-308
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /static/js/ihome/register.js?v=4 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /api/v1.0/image_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO verify.py:101 图片验证码是：RDXD
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:33] "GET /api/v1.0/image_code?cur_id=8bc9bb22-e35d-4c8a-9ae5-4ac365bbcf61 HTTP/1.1" 200 -
+INFO verify.py:57 短信验证码是：205880
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:31:50] "POST /api/v1.0/sms_code HTTP/1.1" 200 -
+ERROR passport.py:63 (_mysql_exceptions.OperationalError) (1048, "Column 'password_hash' cannot be null") [SQL: u'INSERT INTO ih_user_profile (create_time, update_time, name, password_hash, mobile, real_name, id_card, avatar_url) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)'] [parameters: (datetime.datetime(2018, 5, 21, 18, 32, 4, 361348), datetime.datetime(2018, 5, 21, 18, 32, 4, 361383), '13155667788', None, '13155667788', None, None, None)]
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:04] "POST /api/v1.0/users HTTP/1.1" 200 -
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 178-687-308
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 178-687-308
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /static/js/ihome/register.js?v=4 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /api/v1.0/image_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO verify.py:101 图片验证码是：KQEW
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:39] "GET /api/v1.0/image_code?cur_id=4a114801-0428-452e-847e-497870fec720 HTTP/1.1" 200 -
+INFO verify.py:57 短信验证码是：674428
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 18:32:50] "POST /api/v1.0/sms_code HTTP/1.1" 200 -
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 178-687-308
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:47] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:47] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:47] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:47] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:47] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:47] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:47] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:47] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:47] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:47] "GET /static/js/ihome/register.js?v=4 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:47] "GET /api/v1.0/image_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:48] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:48] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO verify.py:101 图片验证码是：8SYZ
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:53:48] "GET /api/v1.0/image_code?cur_id=8bee0811-d9b6-489e-bfcb-68da2ca19cc4 HTTP/1.1" 200 -
+INFO verify.py:57 短信验证码是：828635
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:54:02] "POST /api/v1.0/sms_code HTTP/1.1" 200 -
+ERROR passport.py:64 (_mysql_exceptions.OperationalError) (1048, "Column 'id_card' cannot be null") [SQL: u'INSERT INTO ih_user_profile (create_time, update_time, name, password_hash, mobile, real_name, id_card, avatar_url) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)'] [parameters: (datetime.datetime(2018, 5, 21, 20, 54, 20, 84686), datetime.datetime(2018, 5, 21, 20, 54, 20, 84721), '13155667788', 'pbkdf2:sha256:50000$tcdXAdPP$a98c5d28ebf5fa2ff7572708f683f8f9c27ee09c55c02191e7c7ab7d681f59ea', '13155667788', None, None, None)]
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 20:54:20] "POST /api/v1.0/users HTTP/1.1" 200 -
+INFO _internal.py:87  * Detected change in '/home/python/PycharmProject/FlaskCourse/ihome/ihome/models.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 178-687-308
+INFO _internal.py:87  * Detected change in '/home/python/PycharmProject/FlaskCourse/ihome/ihome/models.py', reloading
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 178-687-308
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:29] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:30] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:30] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:30] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:30] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:30] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:30] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:30] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:30] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:30] "GET /static/js/ihome/register.js?v=4 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:30] "GET /api/v1.0/image_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:31] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:31] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO verify.py:101 图片验证码是：J4KE
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:31] "GET /api/v1.0/image_code?cur_id=93492c57-f7b3-4b34-9087-7569d257417b HTTP/1.1" 200 -
+INFO verify.py:57 短信验证码是：719328
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:01:50] "POST /api/v1.0/sms_code HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:02] "POST /api/v1.0/users HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:02] "GET /index.html HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:02] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:02] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:02] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:02] "GET /static/plugins/swiper/css/swiper.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:02] "GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:02] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:02] "GET /static/css/ihome/index.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:02] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:02] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:02] "GET /static/plugins/swiper/js/swiper.jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:02] "GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:03] "GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:03] "GET /static/js/template.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:03] "GET /static/js/ihome/index.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:03] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:03] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:03] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [21/May/2018 21:02:04] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -

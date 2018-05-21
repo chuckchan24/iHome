@@ -29,20 +29,20 @@ def register():
     password = req_dict.get('password')
 
     if not all([mobile, sms_code, password]):
-        return jsonify(errno=RET.PARAMERR, errmsg='参数不完整')
+        return jsonify(errno=RET.PARAMERR, errmsg='参数不完整!')
 
-    if not re.match(r'^1[35789]\d{0}$', mobile):
-        return jsonify(errno=RET.PARAMERR, errmsg='手机号格式不正确')
+    if not re.match(r'^1[35789]\d{9}$', mobile):
+        return jsonify(errno=RET.PARAMERR, errmsg='手机号格式不正确!')
 
     # 2.从redis中获取短信验证码（如果取不到，说明短信验证码过期）
     try:
-        real_sms_code = redis_store.get('smscode:%s' % mobile)
+        real_sms_code = redis_store.get('smscode: %s' % mobile)
     except Exception as e:
         current_app.logger.error(e)
         return jsonify(errno=RET.DBERR, errmsg='获取短信验证码失败')
 
     if not real_sms_code:
-        return jsonify(errno=RET.NODATA, errmsg='短信验证码已过期')
+        return jsonify(errno=RET.NODATA, errmsg='短信验证码已过期!')
 
     # 3.对比短信验证码，
     if real_sms_code != sms_code:
@@ -53,6 +53,7 @@ def register():
     user.mobile = mobile
     user.name = mobile
     # todo: 注册码加密
+    user.password = password
 
     # 5.把注册用户的信息添加进数据库
     try:

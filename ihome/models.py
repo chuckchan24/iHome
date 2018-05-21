@@ -26,11 +26,20 @@ class User(BaseModel, db.Model):
     password_hash = db.Column(db.String(128), nullable=False)  # 加密的密码
     mobile = db.Column(db.String(11), unique=True, nullable=False)  # 手机号码
     real_name = db.Column(db.String(32))  # 真实姓名
-    id_card = db.Column(db.String(20), nullable=False)  # 身份证号
+    id_card = db.Column(db.String(20))  # 身份证号
     avatar_url = db.Column(db.String(128))  # 用户头像的保存路径
 
     houses = db.relationship('House', backref='user')  # 用户发布的房屋信息
     orders = db.relationship('Order', backref='user')  # 用户下的订单
+
+    @property
+    def password(self):
+        raise AttributeError('不能读取密码内容')
+
+    @password.setter
+    def password(self, value):
+        # 对注册用户的密码进行加密
+        self.password_hash = generate_password_hash(value)
 
 
 class Area(BaseModel, db.Model):
