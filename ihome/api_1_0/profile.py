@@ -9,6 +9,57 @@ from ihome.utils.response_code import RET
 from . import api
 
 
+@api.route('/user/name', methods=['PUT'])
+def set_user_name():
+    """
+    设置用户的用户名：
+    1.接收参数（用户名）并进行校验
+    2.判断用户名是否重复
+    3.设置用户用户名到数据表
+    4.返回应答
+    :return:
+    """
+    # 1.接收参数（用户名）并进行校验
+    username = request.json.get('username')
+
+    if not username:
+        return jsonify(errno=RET.PARAMERR, errmsg='缺少参数')
+
+    # 2.判断用户名是否重复
+    try:
+        user = User.query.filter(User.name == username).first()
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg='查询用户信息失败')
+
+    if user:
+        return jsonify(errno=RET.DATAEXIST, errmsg='用户名已存在')
+
+    # 3.设置用户用户名到数据表
+    user_id = session.get('user_id')
+
+    try:
+        user = User.query.get(user_id)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg='查询用户信息失败')
+
+    if not user:
+        return jsonify(errno=RET.USERERR, errmsg='用户不存在')
+
+    user.name = username
+
+    try:
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg='设置用户名失败')
+
+    # 4.返回应答
+    return jsonify(errno=RET.OK, errmsg='设置用户名成功')
+
+
 @api.route('/user/avatar', methods=['POST'])
 def set_user_avatar():
     """
@@ -82,10 +133,11 @@ def get_user_info():
 
     # 3.组织数据，返回应答
 
-    resp = {
-        'user_id': user.id,
-        'username': user.name,
-        'avatar_url': constants.QINIU_DOMIN_PREFIX + user.avatar_url
-    }
+    # resp = {
+    #     'user_id': user.id,
+    #     'username': user.name,
+    #     'avatar_url': constants.QINIU_DOMIN_PREFIX + user.avatar_url \
+    #     if user.avatar_url else '',
+    # }
 
-    return jsonify(errno=RET.OK, errmsg='OK', data=resp)
+    return jsonify(errno=RET.OK, errmsg='OK', data=user.to_dict())

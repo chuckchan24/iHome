@@ -45,6 +45,16 @@ class User(BaseModel, db.Model):
         # 校验用户密码是否正确
         return check_password_hash(self.password_hash, password)
 
+    def to_dict(self):
+        """将对象的信息转化为字典"""
+        resp = {
+            'user_id': self.id,
+            'username': self.name,
+            'mobile': self.mobile,
+            'avatar_url': constants.QINIU_DOMIN_PREFIX + self.avatar_url if self.avatar_url else '',
+        }
+        return resp
+
 
 class Area(BaseModel, db.Model):
     """区域模型"""
