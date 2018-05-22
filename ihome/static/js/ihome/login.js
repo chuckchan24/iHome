@@ -34,7 +34,7 @@ $(document).ready(function() {
 
         // 请求进行登录
         $.ajax({
-            "url": "/api/v1.0/session",  // 请求的url地址
+            "url": "/api/v1.0/sessions",  // 请求的url地址
             "type": "post",  // 请求方式，默认是get
             "contentType": "application/json",
             "data": JSON.stringify(params),  // 请求时传递的数据

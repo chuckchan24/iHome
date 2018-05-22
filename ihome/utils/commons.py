@@ -2,8 +2,8 @@
 """通用设施文件(正则url、登录验证装饰器)"""
 from flask import session, jsonify, g
 from werkzeug.routing import BaseConverter
-
 from ihome.utils.response_code import RET
+import functools
 
 
 class RegexConverter(BaseConverter):
@@ -16,6 +16,8 @@ class RegexConverter(BaseConverter):
 
 # 自定义登录验证装饰器
 def login_required(view_func):
+
+    @functools.wraps(view_func)
     def wrapper(*args, **kwargs):
         """闭包函数"""
 

@@ -21,6 +21,10 @@ $(document).ready(function () {
             // 设置用户用户名
             $('#user-name').val(resp.data.username);
         }
+        else if (resp.errno == '4101') {
+            // 用户未登录，跳转到登录页面
+            location.href = 'login.html';
+        }
         else {
             // 获取信息失败
             alert(resp.errmsg);
@@ -42,6 +46,10 @@ $(document).ready(function () {
                     // success on uploading
                     // 设置用户头像img标签src
                     $('#user-avatar').attr('src', resp.data.avatar_url);
+                }
+                else if (resp.errno == '4101') {
+                    // 用户未登录，跳转到登录页面
+                    location.href = 'login.html';
                 }
                 else {
                     // fail in uploading
@@ -81,12 +89,15 @@ $(document).ready(function () {
                         // 修改成功
                         showSuccessMsg();
                     }
+                    else if (resp.errno == '4101') {
+                        // 用户未登录，跳转到登录页面
+                        location.href = 'login.html';
+                    }
                     else {
                         // 修改失败
                         alert(resp.errmsg);
                     }
                 }
         });
-
     })
 });
