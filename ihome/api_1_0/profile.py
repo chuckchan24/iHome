@@ -2,14 +2,14 @@
 """次文件定义和用户个人信息相关的api接口"""
 from flask import session, current_app, jsonify, request
 
-from ihome import db
+from ihome import db, constants
 from ihome.models import User
 from ihome.utils.image_storage import storage_image
 from ihome.utils.response_code import RET
 from . import api
 
 
-@api.route('/avatar', methods=['POST'])
+@api.route('/user/avatar', methods=['POST'])
 def set_user_avatar():
     """
     设置用户头像信息：
@@ -54,7 +54,8 @@ def set_user_avatar():
         return jsonify(errno=RET.DBERR, errmsg='设置用户头像记录失败')
 
     # 4.返回应答
-    return jsonify(errno=RET.OK, errmsg='上传头像成功')
+    avatar_url = constants.QINIU_DOMIN_PREFIX + key
+    return jsonify(errno=RET.OK, errmsg='上传头像成功', data={'avatar_url': avatar_url})
 
 
 @api.route('/user')
@@ -84,7 +85,7 @@ def get_user_info():
     resp = {
         'user_id': user.id,
         'username': user.name,
-        'avatar_url': user.avatar_url
+        'avatar_url': constants.QINIU_DOMIN_PREFIX + user.avatar_url
     }
 
     return jsonify(errno=RET.OK, errmsg='OK', data=resp)

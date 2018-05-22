@@ -28,8 +28,30 @@ $(document).ready(function () {
     })
 
     // TODO: 管理上传用户头像表单的行为
+    $('#form-avatar').submit(function (e) {
+        e.preventDefault();
+
+        $(this).ajaxSubmit({
+            'url': '/api/v1.0/user/avatar',
+            'type': 'post',
+            'headers': {
+                'X-CSRFToken': getCookie('csrf_token')
+            },
+            'success': function (resp) {
+                if (resp.errno == '0') {
+                    // success on uploading
+                    // 设置用户头像img标签src
+                    $('#user-avatar').attr('src', resp.data.avatar_url);
+                }
+                else {
+                    // fail in uploading
+                    alert(resp.errmsg);
+                }
+            }
+        })
+    })
 
     // TODO: 管理用户名修改的逻辑
 
-})
+});
 
