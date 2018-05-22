@@ -1,15 +1,17 @@
 # coding=utf-8
 """次文件定义和用户个人信息相关的api接口"""
-from flask import session, current_app, jsonify, request
 
+from flask import session, current_app, jsonify, request, g
 from ihome import db, constants
 from ihome.models import User
 from ihome.utils.image_storage import storage_image
 from ihome.utils.response_code import RET
 from . import api
+from ihome.utils.commons import login_required
 
 
 @api.route('/user/name', methods=['PUT'])
+@login_required
 def set_user_name():
     """
     设置用户的用户名：
@@ -36,7 +38,7 @@ def set_user_name():
         return jsonify(errno=RET.DATAEXIST, errmsg='用户名已存在')
 
     # 3.设置用户用户名到数据表
-    user_id = session.get('user_id')
+    user_id = g.user_id
 
     try:
         user = User.query.get(user_id)
@@ -61,6 +63,7 @@ def set_user_name():
 
 
 @api.route('/user/avatar', methods=['POST'])
+@login_required
 def set_user_avatar():
     """
     设置用户头像信息：
@@ -84,7 +87,7 @@ def set_user_avatar():
         return jsonify(errno=RET.THIRDERR, errmsg='上传用户头像失败')
 
     # 3.设置用户的头像记录
-    user_id = session.get('user_id')
+    user_id = g.user_id
 
     try:
         user = User.query.get(user_id)
@@ -110,6 +113,7 @@ def set_user_avatar():
 
 
 @api.route('/user')
+@login_required
 def get_user_info():
     """
     获取用户个人信息：
@@ -118,8 +122,8 @@ def get_user_info():
     3.组织数据，返回应答
     :return:
     """
-    # 1.session中获取用户的id
-    user_id = session.get('user_id')
+    # 1.从g变量中获取用户的id
+    user_id = g.user_id
 
     # 2.根据id查询用户的信息（如果查不到，说明用户不存在）
     try:
