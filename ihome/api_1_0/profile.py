@@ -10,6 +10,36 @@ from . import api
 from ihome.utils.commons import login_required
 
 
+@api.route('/user/auth', methods=["GET"])
+@login_required
+def get_user_auth():
+    """
+    获取用户的实名认证信息
+    1.获取登录用户的id
+    2.根据id获取用户的信息
+    3.组织数据，返回应答
+    :return:
+    """
+    # 1.获取登录用户的id
+    user_id = g.user_id
+
+    # 2.根据id获取用户的信息
+    try:
+        user = User.query.get(user_id)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg='查询用户信息失败')
+
+    if not user:
+        return jsonify(errno=RET.USERERR, errmsg='用户不存在')
+
+    real_name = user.real_name
+    id_card = user.id_card
+
+    # 3.组织数据，返回应答
+    return jsonify(errno=RET.OK, errmsg='OK', data=user.auth_to_dict())
+
+
 @api.route('/user/auth', methods=['POST'])
 @login_required
 def set_user_auth():
